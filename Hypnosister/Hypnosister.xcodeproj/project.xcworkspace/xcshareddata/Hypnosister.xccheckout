@@ -5,20 +5,20 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>59BF916C-F348-4433-A0A7-B194A080C577</string>
+	<string>6A5BBB69-B947-4A73-B304-885DC4020F74</string>
 	<key>IDESourceControlProjectName</key>
-	<string>Quiz</string>
+	<string>Hypnosister</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>8E84DD99-C8EE-402E-B6DA-AE37FFBF8976</key>
 		<string>https://github.com/mikebrantley/iOS-Class.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Quiz/Quiz/Quiz.xcodeproj/project.xcworkspace</string>
+	<string>Hypnosister/Hypnosister.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>8E84DD99-C8EE-402E-B6DA-AE37FFBF8976</key>
-		<string>../../../..</string>
+		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/mikebrantley/iOS-Class.git</string>

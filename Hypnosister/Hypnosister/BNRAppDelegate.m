@@ -1,24 +1,48 @@
 //
 //  BNRAppDelegate.m
-//  Quiz
+//  Hypnosister
 //
-//  Created by Mike Brantley on 5/11/14.
+//  Created by Mike Brantley on 5/17/14.
 //  Copyright (c) 2014 pifster. All rights reserved.
 //
 
 #import "BNRAppDelegate.h"
-#import "BNRQuizViewController.h"
+#import "BNRHypnosisView.h"
 
 @implementation BNRAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
+    //CGRect firstFrame = self.window.bounds;
+    //BNRHypnosisView *firstView = [[BNRHypnosisView alloc] initWithFrame:firstFrame];
+    //firstView.backgroundColor = [UIColor redColor];
+    //[self.window addSubview:firstView];
+    
+    // Create CGRects for frames
+    CGRect screenRect = self.window.bounds;
+    CGRect bigRect = screenRect;
+    bigRect.size.width *= 2.0;
+    
+    // Create a screen-sized scroll view and add it to the window
+    UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:screenRect];
+    [self.window addSubview:scrollView];
+    
+    // Create a super-sized hypnosis view and add it to the scroll view
+    BNRHypnosisView *hypnosisView = [[BNRHypnosisView alloc] initWithFrame:screenRect];
+    [scrollView addSubview:hypnosisView];
+    
+    // Add a second screen-sized hypnosis view just off the screen to the right
+    screenRect.origin.x += screenRect.size.width;
+    BNRHypnosisView *anotherView = [[BNRHypnosisView alloc] initWithFrame:screenRect];
+    scrollView.pagingEnabled = YES;
+    [scrollView addSubview:anotherView];
+    
+    // Tell the scroll view ho big its content area is
+    scrollView.contentSize = bigRect.size;
+    
     // Override point for customization after application launch.
-    
-    BNRQuizViewController *quizVC = [[BNRQuizViewController alloc] init];
-    self.window.rootViewController = quizVC;
-    
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;
